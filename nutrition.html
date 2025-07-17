@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#d23369">
+    <meta charset="UTF-8">
+    <title>SportLife - Питание</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Стили для страницы питания */
+        .nutrition-intro {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .food-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .food-item {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(255,105,180,0.1);
+            height: 100%; 
+            flex-direction: column;
+        }
+        
+        .food-img-container {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .food-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        
+    
+        
+        .food-caption {
+            padding: 1rem;
+            text-align: center;
+            border-top: 1px solid #ffe6ee;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .food-caption h3 {
+            color: #d23369;
+            margin: 0;
+            font-size: 1.1rem;
+        }
+        
+        .nutrition-tips {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin-top: 3rem;
+            box-shadow: 0 5px 15px rgba(255,105,180,0.1);
+        }
+        
+        .nutrition-tips h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .tip-item {
+            background: #fff0f5;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid #ff69b4;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="nutrition.html">Питание</a>
+            <a href="sports.html">Виды спорта</a>
+            <a href="feedback.php">Обратная связь</a>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="nutrition-intro">
+            <h1>Здоровое питание</h1>
+            <p>Правильное питание - 70% успеха в спорте. Баланс белков, жиров и углеводов - залог прогресса.</p>
+        </section>
+        
+        <div class="food-gallery">
+            <div class="food-item">
+                <div class="food-img-container">
+                    <img src="food1.jpg" alt="Энергетический завтрак">
+                </div>
+                <div class="food-caption">
+                    <h3>Энергетический завтрак</h3>
+                </div>
+            </div>
+            
+            <div class="food-item">
+                <div class="food-img-container">
+                    <img src="food2.jpg" alt="Питательный обед">
+                </div>
+                <div class="food-caption">
+                    <h3>Питательный обед</h3>
+                </div>
+            </div>
+            
+            <div class="food-item">
+                <div class="food-img-container">
+                    <img src="food3.jpg" alt="Легкий ужин">
+                </div>
+                <div class="food-caption">
+                    <h3>Легкий ужин</h3>
+                </div>
+            </div>
+            
+            <div class="food-item">
+                <div class="food-img-container">
+                    <img src="food4.jpg" alt="Полезный перекус">
+                </div>
+                <div class="food-caption">
+                    <h3>Полезный перекус</h3>
+                </div>
+            </div>
+        </div>
+        
+        <section class="nutrition-tips">
+            <h2>Советы по питанию</h2>
+            <div class="tips-grid">
+                <div class="tip-item">
+                    <h3>Белки</h3>
+                    <p>1.5-2 г белка на кг веса для роста мышц</p>
+                </div>
+                <div class="tip-item">
+                    <h3>Углеводы</h3>
+                    <p>Сложные углеводы - основной источник энергии</p>
+                </div>
+                <div class="tip-item">
+                    <h3>Жиры</h3>
+                    <p>Полезные жиры важны для гормонального баланса</p>
+                </div>
+                <div class="tip-item">
+                    <h3>Вода</h3>
+                    <p>2-3 литра воды в день для поддержания метаболизма</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+       <p>Мой Telegram: <a href="https://t.me/borshevikas">@borshevikas</a></p>
+    </footer>
+    <script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/service-worker.js')
+        .then(registration => {
+          console.log('ServiceWorker registration successful');
+        })
+        .catch(err => {
+          console.log('ServiceWorker registration failed: ', err);
+        });
+    });
+  }
+</script>
+</body>
+</html>
