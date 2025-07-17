@@ -162,17 +162,11 @@
     <footer>
         <p>Мой Telegram: <a href="https://t.me/borshevikas">@borshevikas</a></p>
     </footer>
-    <script>
+<script>
   if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/service-worker.js')
-        .then(registration => {
-          console.log('ServiceWorker registration successful');
-        })
-        .catch(err => {
-          console.log('ServiceWorker registration failed: ', err);
-        });
-    });
+    navigator.serviceWorker.register('service-worker.js')  // Без слеша!
+      .then(reg => console.log('Service Worker registered'))
+      .catch(err => console.error('SW error:', err));
   }
 </script>
 </body>
