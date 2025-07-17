@@ -1,3 +1,4 @@
+<link rel="manifest" href="manifest.webmanifest">
 {
   "name": "SportLife",
   "short_name": "SportLife",
