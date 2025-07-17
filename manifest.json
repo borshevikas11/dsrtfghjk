@@ -1,10 +1,8 @@
 {
-  "name": "SportLife",
-  "short_name": "SportLife",
-  "description": "Приложение для здорового образа жизни",
-  "theme_color": "#ff69b4",
-  "background_color": "#fff0f5",
-  "display": "standalone"
-  "id": "/",
-  "start_url": "/index.html"
+  "name": "Задание 2",
+  "short_name": "р2",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
 }
